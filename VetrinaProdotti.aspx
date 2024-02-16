@@ -20,17 +20,20 @@
             </div>
         </div>
     </nav>
+    <div class="grid place-items-center">
+        <h1 class="font-bold text-xl m-5">I nostri prodotti</h1>
+    </div>
     <form id="form1" runat="server">
         <div class="container mx-auto">
-            <div class="flex">
-                <p>Filtra i prodotti per categoria:</p> 
+            <div class="flex m-8">
+                <p>Filtra i prodotti per categoria:</p>
                 <asp:DropDownList ID="DropDownListGenere" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListGenere_SelectedIndexChanged">
-                <asp:ListItem Text="Tutti i prodotti" Value=""></asp:ListItem>
-                <asp:ListItem Text="Caramelle" Value="Caramelle"></asp:ListItem>
-                <asp:ListItem Text="Cioccolato" Value="Cioccolato"></asp:ListItem>
-                <asp:ListItem Text="Creme" Value="Creme"></asp:ListItem>
-                <asp:ListItem Text="Confetture" Value="Confetture"></asp:ListItem>
-            </asp:DropDownList>
+                    <asp:ListItem Text="Tutti i prodotti" Value=""></asp:ListItem>
+                    <asp:ListItem Text="Caramelle" Value="Caramelle"></asp:ListItem>
+                    <asp:ListItem Text="Cioccolato" Value="Cioccolato"></asp:ListItem>
+                    <asp:ListItem Text="Creme" Value="Creme"></asp:ListItem>
+                    <asp:ListItem Text="Confetture" Value="Confetture"></asp:ListItem>
+                </asp:DropDownList>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <asp:Repeater ID="ProdottiRepeater" runat="server">

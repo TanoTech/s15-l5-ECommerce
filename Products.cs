@@ -60,7 +60,7 @@ namespace WonkaShopProdotti
             _prodotti.AggiungiProdotto(new Prodotto
             {
                 Id = 1,
-                Nome = "Jellydilli",
+                Nome = "Jellydrilli",
                 Descrizione = "Coccodrilli gommosi di varie forme e gusti, per colorare le tue feste!.",
                 Prezzo = 10,
                 Categoria = "Caramelle",
@@ -176,6 +176,66 @@ namespace WonkaShopProdotti
                 Prezzo = 6,
                 Categoria = "Confetture",
                 Immagine = "https://i.ebayimg.com/images/g/6~sAAOSwku5lxzNN/s-l500.jpg"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 13,
+                Nome = "Caccao in polvere",
+                Descrizione = "Per sporcare tutto il piano cottura.",
+                Prezzo = 2,
+                Categoria = "Cioccolato",
+                Immagine = "https://cibobenessere.com/cdn/shop/products/Cacao.jpg?v=1647788070"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 14,
+                Nome = "Burro di arachidi",
+                Descrizione = "Con la marmellata è tutta un'altra storia.",
+                Prezzo = 4,
+                Categoria = "Creme",
+                Immagine = "https://media-assets.lacucinaitaliana.it/photos/620fbeeee7e738246399909a/4:3/w_1332,h_999,c_limit/empty"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 15,
+                Nome = "Confettura di fragole",
+                Descrizione = "Dai nostri giardini, le migliori fragole.",
+                Prezzo = 4,
+                Categoria = "Confetture",
+                Immagine = "https://www.giallozafferano.it/images/1-186/Confettura-di-fragole_780x520_wm.jpg"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 16,
+                Nome = "Confettura di Cipolle di Tropea",
+                Descrizione = "I tuoi colleghi ti ameranno dopo la colazione!",
+                Prezzo = 3,
+                Categoria = "Confetture",
+                Immagine = "https://m.media-amazon.com/images/I/71v27ow7VnL.__AC_SX300_SY300_QL70_ML2_.jpg"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 17,
+                Nome = "Omini di zenzero",
+                Descrizione = "E' stato l'uomo focaccina!",
+                Prezzo = 5,
+                Categoria = "Cioccolato",
+                Immagine = "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2021/12/266110804_412230987161909_6313084509569524014_n-1200x675.jpeg"
+            });
+
+            _prodotti.AggiungiProdotto(new Prodotto
+            {
+                Id = 18,
+                Nome = "Caramelle seltz",
+                Descrizione = "Frizza che è tutto un brio!",
+                Prezzo = 4,
+                Categoria = "Caramelle",
+                Immagine = "https://m.media-amazon.com/images/I/71mrUgPc5pL.__AC_SX300_SY300_QL70_ML2_.jpg"
             });
         }
 

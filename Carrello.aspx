@@ -48,8 +48,8 @@
                        </ItemTemplate>
                    </asp:Repeater>
                </div>
-               <div id="totaleCarrello" runat="server" class="flex-grow-0 flex-basis-1/4">
-                   <p>Totale:</p>
+               <div id="totaleCarrello" runat="server" class="flex-grow-0 flex-basis-1/4 mt-20">
+                   <p>Totale carrello:</p>
                    <asp:Label runat="server" ID="TotaleCarrelloLabel"></asp:Label>
                </div>
            </div>
