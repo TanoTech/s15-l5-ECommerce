@@ -1,7 +1,7 @@
 Piattaforma di E-commerce
 
 # Funzionalità Principali
-## 1. Vetrina Prodotti (VetrinaProdotti.aspx)
+## 1. Vetrina Prodotti (VetrinaProdotti.aspx)
 Mostra una lista di prodotti disponibili per l'acquisto.
 Gli utenti possono filtrare i prodotti per categoria.
 Ogni prodotto mostra il nome, il prezzo, la categoria e due pulsanti: "Aggiungi al carrello" e "Visualizza dettagli".
