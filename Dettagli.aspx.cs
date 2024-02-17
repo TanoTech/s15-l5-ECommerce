@@ -17,24 +17,28 @@ namespace WonkaShop
         {
             if (Request.QueryString["id"] != null)
             {
-                int idProdotto = Convert.ToInt32(Request.QueryString["id"]);
-
-                ListaProdotti listaProdotti = new ListaProdotti();
-                Prodotti prodotti = listaProdotti.GetProdotti();
-
-                Prodotto dettagliProdotto = prodotti.TrovaProdotto(idProdotto);
-
-                if (dettagliProdotto != null)
+                int idProdotto;
+                if (int.TryParse(Request.QueryString["id"], out idProdotto))
                 {
-                    imgProdotto.ImageUrl = dettagliProdotto.Immagine;
-                    lblNomeProdotto.Text = dettagliProdotto.Nome;
-                    lblDescrizione.Text = dettagliProdotto.Descrizione;
-                    lblPrezzo.Text = "Prezzo: " + dettagliProdotto.Prezzo.ToString("C");
+                    ListaProdotti listaProdotti = new ListaProdotti();
+                    Prodotti prodotti = listaProdotti.GetProdotti();
+
+                    Prodotto dettagliProdotto = prodotti.TrovaProdotto(idProdotto);
+                    if (dettagliProdotto != null)
+                    {
+                        imgProdotto.ImageUrl = dettagliProdotto.Immagine;
+                        lblNomeProdotto.Text = dettagliProdotto.Nome;
+                        lblDescrizione.Text = dettagliProdotto.Descrizione;
+                        lblPrezzo.Text = "Prezzo: " + dettagliProdotto.Prezzo.ToString("C");
+                        return;
+                    }
                 }
             }
-        }
 
-        protected void BtnAggiungiAlCarrello_Click(object sender, EventArgs e)
+            Response.Redirect("VetrinaProdotti.aspx");
+        }
+    
+            protected void BtnAggiungiAlCarrello_Click(object sender, EventArgs e)
         {
             if (Request.QueryString["id"] != null)
             {
