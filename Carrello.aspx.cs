@@ -15,7 +15,7 @@ namespace WonkaShopCarrello
             public int Id { get; set; }
             public Prodotto Prodotto { get; set; }
             public int Quantita { get; set; }
-            
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace WonkaShopCarrello
         {
             HttpCookie cookieCarrello = Request.Cookies["Carrello"];
 
-            if (cookieCarrello != null)
+            if (cookieCarrello != null && cookieCarrello.Values.Count > 0)
             {
                 List<ProdottoCarrello> prodottiNelCarrello = new List<ProdottoCarrello>();
 
@@ -40,19 +40,25 @@ namespace WonkaShopCarrello
 
                 foreach (string idProdotto in cookieCarrello.Values.AllKeys)
                 {
-                    int id = int.Parse(idProdotto);
-                    int quantita = int.Parse(cookieCarrello[idProdotto]); 
-                    Prodotto prodotto = prodottiDisponibili.TrovaProdotto(id);
-                    if (prodotto != null)
+                    if (!string.IsNullOrEmpty(idProdotto))
                     {
-                        ProdottoCarrello prodottoCarrello = prodottiNelCarrello.FirstOrDefault(p => p.Id == id);
-                        if (prodottoCarrello != null)
+                        int id;
+                        if (int.TryParse(idProdotto, out id))
                         {
-                            prodottoCarrello.Quantita += quantita;
-                        }
-                        else
-                        {
-                            prodottiNelCarrello.Add(new ProdottoCarrello { Id = id, Prodotto = prodotto, Quantita = quantita });
+                            int quantita = int.Parse(cookieCarrello[idProdotto]);
+                            Prodotto prodotto = prodottiDisponibili.TrovaProdotto(id);
+                            if (prodotto != null)
+                            {
+                                ProdottoCarrello prodottoCarrello = prodottiNelCarrello.FirstOrDefault(p => p.Id == id);
+                                if (prodottoCarrello != null)
+                                {
+                                    prodottoCarrello.Quantita += quantita;
+                                }
+                                else
+                                {
+                                    prodottiNelCarrello.Add(new ProdottoCarrello { Id = id, Prodotto = prodotto, Quantita = quantita });
+                                }
+                            }
                         }
                     }
                 }
@@ -65,7 +71,6 @@ namespace WonkaShopCarrello
                 ProdottiNelCarrelloRepeater.Visible = false;
             }
         }
-
         protected void ProdottiNelCarrelloRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -158,21 +163,26 @@ namespace WonkaShopCarrello
             HttpCookie cartCookie = Request.Cookies["Carrello"];
             decimal totale = 0;
 
-            if (cartCookie != null)
+            if (cartCookie != null && cartCookie.Values.Count > 0)
             {
-                List<ProdottoCarrello> prodottiNelCarrello = new List<ProdottoCarrello>();
                 ListaProdotti listaProdotti = new ListaProdotti();
                 Prodotti prodottiDisponibili = listaProdotti.GetProdotti();
 
                 foreach (string idProdotto in cartCookie.Values.AllKeys)
                 {
-                    int id = int.Parse(idProdotto);
-                    int quantita = int.Parse(cartCookie[idProdotto]);
-                    Prodotto prodotto = prodottiDisponibili.TrovaProdotto(id);
-
-                    if (prodotto != null)
+                    if (!string.IsNullOrEmpty(idProdotto))
                     {
-                        totale += prodotto.Prezzo * quantita;
+                        int id;
+                        if (int.TryParse(idProdotto, out id))
+                        {
+                            int quantita = int.Parse(cartCookie[idProdotto]);
+                            Prodotto prodotto = prodottiDisponibili.TrovaProdotto(id);
+
+                            if (prodotto != null)
+                            {
+                                totale += prodotto.Prezzo * quantita;
+                            }
+                        }
                     }
                 }
             }

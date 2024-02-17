@@ -64,7 +64,7 @@ namespace WonkaShopProdotti
                 Descrizione = "Coccodrilli gommosi di varie forme e gusti, per colorare le tue feste!.",
                 Prezzo = 10,
                 Categoria = "Caramelle",
-                Immagine = "https://m.media-amazon.com/images/I/51EADJuHgAL._AC_UF1000,1000_QL80_.jpg"
+                Immagine = "https://www.caramellina.it/cdn/shop/files/coccodrillidamel.jpg"
             });
 
             _prodotti.AggiungiProdotto(new Prodotto
@@ -74,7 +74,7 @@ namespace WonkaShopProdotti
                 Descrizione = "I famosissimi orsetti gommosi, personaggi principali del tuo party.",
                 Prezzo = 12,
                 Categoria = "Caramelle",
-                Immagine = "https://www.pianetacaramelle.com/10726-thickbox_default/orsetti-gommosi-colorati.jpg"
+                Immagine = "https://ilblogdinicolo.files.wordpress.com/2016/11/haribo.jpg"
             });
 
             _prodotti.AggiungiProdotto(new Prodotto

@@ -15,6 +15,15 @@ namespace WonkaShop
     {
 
         /// <summary>
+        /// counterCarrelloLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl counterCarrelloLabel;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -22,15 +31,6 @@ namespace WonkaShop
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// imgProdotto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgProdotto;
 
         /// <summary>
         /// lblNomeProdotto control.
@@ -67,5 +67,14 @@ namespace WonkaShop
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAggiungiAlCarrello;
+
+        /// <summary>
+        /// imgProdotto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgProdotto;
     }
 }

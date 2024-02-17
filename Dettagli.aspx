@@ -1,11 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dettagli.aspx.cs" Inherits="WonkaShop.Dettagli" %>
 
 <!DOCTYPE html>
+<link href="Stile.css" rel="stylesheet" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Dettagli Prodotto</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="contatore.js" defer></script>
 </head>
 <body>
     <nav class="bg-gray-800 p-6">
@@ -16,23 +18,24 @@
             </div>
             <div class="flex">
                 <a href="VetrinaProdotti.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Vetrina Prodotti</a>
-                <a href="Carrello.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Carrello</a>
+                <a href="Carrello.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Carrello(<span id="counterCarrelloLabel" runat="server">0</span>)</a>
             </div>
         </div>
     </nav>
     <form id="form1" runat="server">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-semibold mt-8 mb-4">Dettagli Prodotto</h1>
-            <div class="grid place-items-center">
-                <asp:Image ID="imgProdotto" runat="server" CssClass="h-70 object-cover" />
-            </div>
-            <div class="px-6 py-4 grid place-items-center">
-                <div class="font-bold text-xl mb-2">
-                    <asp:Label ID="lblNomeProdotto" runat="server" Text=""></asp:Label></div>
-                <p class="text-gray-700 text-base">
-                    <asp:Label ID="lblDescrizione" runat="server" Text=""></asp:Label></p>
-                <asp:Label ID="lblPrezzo" runat="server" CssClass="text-gray-700 text-base"></asp:Label>
-                <asp:Button ID="btnAggiungiAlCarrello" runat="server" Text="Aggiungi al carrello" OnClick="BtnAggiungiAlCarrello_Click" />
+        <div class="container mx-auto mt-3">
+            <div class="px-6 py-4 grid place-items-center mt-5">
+                <div class="font-bold text-2xl mb-2 text-white">
+                    <asp:Label ID="lblNomeProdotto" runat="server" Text=""></asp:Label>
+                </div>
+                <p class=" text-xl text-white m1">
+                    <asp:Label ID="lblDescrizione" runat="server" Text=""></asp:Label>
+                </p>
+                <asp:Label ID="lblPrezzo" runat="server" CssClass="text-white text-xl m-3"></asp:Label>
+                <asp:Button ID="btnAggiungiAlCarrello" runat="server" Text="Aggiungi al carrello" OnClick="BtnAggiungiAlCarrello_Click" class="btnAggiungiCarrello mb-10" />
+                <div class="grid place-items-center h-30">
+                    <asp:Image ID="imgProdotto" runat="server" CssClass="w-full h-25  rounded-l" />
+                </div>
             </div>
         </div>
     </form>

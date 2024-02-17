@@ -6,6 +6,8 @@
 <head runat="server">
     <title>Vetrina Prodotti</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="Stile.css" rel="stylesheet" />
+    <script src="contatore.js" defer></script>
 </head>
 <body>
     <nav class="bg-gray-800 p-6">
@@ -16,12 +18,12 @@
             </div>
             <div class="flex">
                 <a href="VetrinaProdotti.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Vetrina Prodotti</a>
-                <a href="Carrello.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Carrello</a>
+                <a href="Carrello.aspx" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Carrello(<span id="counterCarrelloLabel" runat="server">0</span>)</a>
             </div>
         </div>
     </nav>
     <div class="grid place-items-center">
-        <h1 class="font-bold text-xl m-5">I nostri prodotti</h1>
+        <h1 class="font-bold text-6xl m-5">I nostri prodotti</h1>
     </div>
     <form id="form1" runat="server">
         <div class="container mx-auto">
@@ -42,14 +44,15 @@
                             <div class="grid place-items-center">
                                 <img class="h-60" src='<%# Eval("Immagine") %>' alt='<%# Eval("Nome") %>' />
                             </div>
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2"><%# Eval("Nome") %></div>
-                                <p class="text-gray-700 text-base"><%# Eval("Descrizione") %></p>
-                                <p class="text-gray-700 text-base">Prezzo: <%# Eval("Prezzo") %> €/KG</p>
-                                <p class="text-gray-700 text-base">Categoria: <%# Eval("Categoria") %></p>
+                            <div class="px-6 py-4 blur-20">
+                                <div class="font-bold text-2xl mb-2 text-white"><%# Eval("Nome") %></div>
+                                <p class=" text-base m-1 text-white">Prezzo: <%# Eval("Prezzo") %> €/KG</p>
+                                <p class=" text-base m-1 text-white  ">Categoria: <%# Eval("Categoria") %></p>
                                 <asp:HiddenField ID="IdProdotto" runat="server" Value='<%# Eval("Id") %>' />
-                                <asp:Button runat="server" Text="Aggiungi al carrello" OnClick="AggiungiAlCarrello_Click" />
-                                <asp:Button ID="btnDettagli" runat="server" Text="Visualizza Dettagli" OnCommand="Dettagli" CommandName="Dettagli" CommandArgument='<%# Eval("Id") %>' />
+                                <div class="flex">
+                                    <asp:Button runat="server" Text="Aggiungi al carrello" OnClick="AggiungiAlCarrello_Click" class="btnAggiungiCarrello" />
+                                    <asp:Button ID="btnDettagli" runat="server" Text="Visualizza Dettagli" OnCommand="Dettagli" CommandName="Dettagli" CommandArgument='<%# Eval("Id") %>' class="btnDet" />
+                                </div>
                             </div>
                         </div>
                     </ItemTemplate>

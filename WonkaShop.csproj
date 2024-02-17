@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contatore.js" />
     <Content Include="Global.asax" />
+    <Content Include="Stile.css" />
+    <Content Include="StileWonkaPuppet.css" />
     <Content Include="Web.config" />
     <Content Include="VetrinaProdotti.aspx" />
     <Content Include="Carrello.aspx" />

@@ -1,0 +1,186 @@
+﻿body {
+    background: linear-gradient(95deg, #0000FF, #4B0082, #800080, #9932CC, #FF69B4);
+    background-size: contain;
+}
+
+.btnAggiungiCarrello {
+    margin: 0.8em;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #ff69b4, #ff00ff, #8a2be2, #4b0082, #800080, #9400d3, #da70d6);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+    .btnAggiungiCarrello:hover {
+        animation: animate 8s linear infinite;
+        color: white;
+    }
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.btnDet:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(45deg,#ff69b4, #ff00ff, #8a2be2, #4b0082, #800080, #9400d3, #da70d6);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5%;
+}
+
+.btnDet:hover:before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+.btnDet {
+    margin: 0.8em;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #00ff00, #32cd32, #008000, #0000ff, #0000cd, #191970, #4169e1);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+    .btnDet:hover {
+        animation: animate 8s linear infinite;
+        color: white;
+    }
+
+    .btnDet:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(45deg, #00ff00, #32cd32, #008000, #0000ff, #0000cd, #191970, #4169e1);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5%;
+    }
+
+    .btnDet:hover:before {
+        filter: blur(20px);
+        opacity: 1;
+        animation: animate 8s linear infinite;
+    }
+
+.bntElimina {
+    margin: 0.8em;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #FF5733, #FF5733 20%, #000000 20%, #000000 40%, #FF5733 40%, #FF5733 60%, #000000 60%, #000000 80%, #FF5733 80%);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+    .bntElimina:hover {
+        animation: animate 8s linear infinite;
+    }
+
+    .bntElimina:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(45deg, #FF5733, #FF5733 20%, #000000 20%, #000000 40%, #FF5733 40%, #FF5733 60%, #000000 60%, #000000 80%, #FF5733 80%);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .bntElimina:hover:before {
+        filter: blur(20px);
+        opacity: 1;
+        animation: animate 8s linear infinite;
+    }
+
+.btnRefr {
+    margin: 0.8em;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: black; 
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #00ff00, #00ff00 20%, #ffffff 20%, #ffffff 40%, #00ff00 40%, #00ff00 60%, #ffffff 60%, #ffffff 80%, #00ff00 80%);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+    .btnRefr:hover {
+        animation: animate 8s linear infinite; 
+    }
+
+    .btnRefr:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        z-index: -1;
+        background: linear-gradient(45deg, #00ff00, #00ff00 20%, #ffffff 20%, #ffffff 40%, #00ff00 40%, #00ff00 60%, #ffffff 60%, #ffffff 80%, #00ff00 80%);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .btnRefr:hover:before {
+        filter: blur(20px);
+        opacity: 1;
+        animation: animate 8s linear infinite;
+    }
+
+
