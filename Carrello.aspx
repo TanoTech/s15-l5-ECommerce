@@ -5,15 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" defer="" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" defer="defet" />
     <link href="Stile.css" rel="stylesheet" />
-    <script src="contatore.js" defer></script>
+    <script src="contatore.js" defer="defer"></script>
 </head>
 <body>
     <nav class="bg-gray-800 p-6">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="h-16 w-auto mr-2" src="https://i.pinimg.com/originals/60/a6/d4/60a6d4eb6c46e97cae44a3663ad91030.png" alt="Logo">
+                <img class="h-16 w-auto mr-2" src="https://i.pinimg.com/originals/60/a6/d4/60a6d4eb6c46e97cae44a3663ad91030.png" alt="Logo" />
                 <span class="font-semibold text-xl">WonkaShop</span>
             </div>
             <div class="flex">

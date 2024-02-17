@@ -7,13 +7,13 @@
     <title>Vetrina Prodotti</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="Stile.css" rel="stylesheet" />
-    <script src="contatore.js" defer></script>
+    <script src="contatore.js" defer="defer"></script>
 </head>
 <body>
     <nav class="bg-gray-800 p-6">
         <div class="container mx-auto flex items-center justify-between">
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="h-16 w-auto mr-2" src="https://i.pinimg.com/originals/60/a6/d4/60a6d4eb6c46e97cae44a3663ad91030.png" alt="Logo">
+                <img class="h-16 w-auto mr-2" src="https://i.pinimg.com/originals/60/a6/d4/60a6d4eb6c46e97cae44a3663ad91030.png" alt="Logo" />
                 <span class="font-semibold text-xl">WonkaShop</span>
             </div>
             <div class="flex">
@@ -23,12 +23,12 @@
         </div>
     </nav>
     <div class="grid place-items-center">
-        <h1 class="font-bold text-6xl m-5">I nostri prodotti</h1>
+        <h1 class="font-bold text-6xl m-5 text-white h1Capo">I nostri prodotti</h1>
     </div>
     <form id="form1" runat="server">
         <div class="container mx-auto">
             <div class="flex m-8">
-                <p>Filtra i prodotti per categoria:</p>
+                <p class="text-white">Filtra i prodotti per categoria:</p>
                 <asp:DropDownList ID="DropDownListGenere" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListGenere_SelectedIndexChanged">
                     <asp:ListItem Text="Tutti i prodotti" Value=""></asp:ListItem>
                     <asp:ListItem Text="Caramelle" Value="Caramelle"></asp:ListItem>

@@ -1,5 +1,5 @@
 ﻿body {
-    background: linear-gradient(95deg, #0000FF, #4B0082, #800080, #9932CC, #FF69B4);
+    background: #a42dea;
     background-size: contain;
 }
 
@@ -47,7 +47,7 @@
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
-    transition: 0.5%;
+    transition: 0.5s;
 }
 
 .btnDet:hover:before {
@@ -90,7 +90,7 @@
         background-size: 400%;
         border-radius: 40px;
         opacity: 0;
-        transition: 0.5%;
+        transition: 0.5s;
     }
 
     .btnDet:hover:before {
@@ -182,5 +182,9 @@
         opacity: 1;
         animation: animate 8s linear infinite;
     }
+
+.h1Capo {
+    border-bottom: 2px solid black;
+}
 
 
