@@ -1,3 +1,5 @@
+[![Demo](https://img.youtube.com/vi/MM26W3Bd5lo/0.jpg)](https://youtu.be/MM26W3Bd5lo)
+
 Piattaforma di E-commerce
 
 # Funzionalità Principali
